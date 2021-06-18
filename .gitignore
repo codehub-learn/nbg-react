@@ -1,6 +1,6 @@
 **/node_modules
 
-./intermediate/workshop/todo-app/src/TodoApp-solution.js
-./intermediate/workshop/todo-app/src/components/TodoItem-solution.js
+intermediate/workshop/todo-app/src/TodoApp-solution.js
+intermediate/workshop/todo-app/src/components/TodoItem-solution.js
 
 **/solution
