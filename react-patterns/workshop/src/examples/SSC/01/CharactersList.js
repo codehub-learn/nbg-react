@@ -16,7 +16,7 @@ const CharactersList = () => {
 
   return (
     <div>
-      <Title>PCC 01: Starting Point</Title>
+      <Title>SSC 01: Starting Point</Title>
       <hr />
       <div className="characters-container">
         {characters.length &&

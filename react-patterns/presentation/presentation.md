@@ -19,6 +19,7 @@ All the content can be found [here](https://github.com/codehub-learn/nbg-react).
 - higher-order components (HoC)
 - render props
 - custom hooks
+- compound components
 
 ---
 

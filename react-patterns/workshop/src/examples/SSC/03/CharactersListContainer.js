@@ -15,7 +15,7 @@ const CharactersListContainer = () => {
   return (
     <CharactersList
       characters={characters}
-      title="PCC 03: Container and presentational components"
+      title="SSC 03: Container and presentational components"
     />
   );
 };

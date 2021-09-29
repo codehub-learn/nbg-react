@@ -5,7 +5,7 @@ const { Title } = Typography;
 
 const CharactersList = ({ characters }) => (
   <div>
-    <Title>PCC 02: Container and presentational components</Title>
+    <Title>SSC 02: Container and presentational components</Title>
     <hr />
     <div className="characters-container">
       {characters.length &&

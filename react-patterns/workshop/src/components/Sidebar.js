@@ -9,15 +9,15 @@ const { SubMenu, Item } = Menu;
 const Sidebar = () => (
   <Sider width={200}>
     <Menu mode="inline" style={{ height: "100%" }}>
-      <SubMenu icon={<DeploymentUnitOutlined />} title="PCC">
+      <SubMenu icon={<DeploymentUnitOutlined />} title="SSC">
         <Item>
           01: Starting Point <Link to="/ssc/1" />
         </Item>
         <Item>
-          02: Container and presentational component <Link to="/ssc/2" />
+          02: Stateful and stateless component <Link to="/ssc/2" />
         </Item>
         <Item>
-          03: Container and presentational component <Link to="/ssc/3" />
+          03: Stateful and stateless component <Link to="/ssc/3" />
         </Item>
         <Item>
           PCC exercise <Link to="/ssc/exercise" />
