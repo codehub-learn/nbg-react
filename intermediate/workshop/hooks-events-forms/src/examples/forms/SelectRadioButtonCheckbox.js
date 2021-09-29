@@ -13,7 +13,7 @@ const SelectRadioButtonCheckbox = () => {
   const changeGender = (e) => {
     setGender(e.target.value);
   };
-  const changeFood = (e) => {
+  const changeInterest = (e) => {
     const value = e.target.value;
     if (interests.includes(value)) {
       // setInterests
@@ -46,7 +46,7 @@ const SelectRadioButtonCheckbox = () => {
             value="male"
             checked={gender === "male"}
             onChange={changeGender}
-          />{" "}
+          />
           Male
         </label>
         <label>
@@ -56,7 +56,7 @@ const SelectRadioButtonCheckbox = () => {
             value="female"
             checked={gender === "female"}
             onChange={changeGender}
-          />{" "}
+          />
           Female
         </label>
       </div>
@@ -69,8 +69,8 @@ const SelectRadioButtonCheckbox = () => {
               name="programming"
               value="programming"
               checked={interests.includes("programming")}
-              onChange={changeFood}
-            />{" "}
+              onChange={changeInterest}
+            />
             Programming
           </label>
           <label>
@@ -79,8 +79,8 @@ const SelectRadioButtonCheckbox = () => {
               name="movies"
               value="movies"
               checked={interests.includes("movies")}
-              onChange={changeFood}
-            />{" "}
+              onChange={changeInterest}
+            />
             Movies
           </label>
           <label>
@@ -89,8 +89,8 @@ const SelectRadioButtonCheckbox = () => {
               name="boxing"
               value="boxing"
               checked={interests.includes("boxing")}
-              onChange={changeFood}
-            />{" "}
+              onChange={changeInterest}
+            />
             Boxing
           </label>
         </div>
