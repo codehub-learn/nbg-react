@@ -32,13 +32,12 @@ const Tabs = ({ children }) => {
       </nav>
       <section id="content">
         {tabPanes.length &&
-          tabPanes.map(({ index, content, styles }) => (
+          tabPanes.map(({ index, content }) => (
             <TabsContent
               key={index}
               index={index}
               content={content}
               isVisible={activeTab === index}
-              style={styles ?? {}}
             />
           ))}
       </section>
