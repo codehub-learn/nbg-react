@@ -38,7 +38,6 @@ export const fetchTodos = () => (dispatch, getState) => {
       dispatch(fetchTodosSuccess(todos));
     })
     .catch((e) => {
-      console.log("DEN pernaei", e);
       dispatch(fetchTodosError());
     });
 };

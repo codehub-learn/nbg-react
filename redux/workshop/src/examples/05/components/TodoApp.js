@@ -18,8 +18,6 @@ const TodoApp = () => {
     dispatch(fetchTodos());
   }, [dispatch]);
 
-  console.log(todos, input);
-
   return (
     <div className="container">
       <h2>My ToDos</h2>

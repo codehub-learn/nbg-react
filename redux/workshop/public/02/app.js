@@ -2,12 +2,12 @@ const initialState = { counter: 3 };
 
 function reducer(state, action) {
   switch (action.type) {
-  case "INC":
-    return { ...state, counter: state.counter + 1 };
-  case "DEC":
-    return { ...state, counter: state.counter - 1 };
-  default:
-    return state;
+    case "INC":
+      return { ...state, counter: state.counter + 1 };
+    case "DEC":
+      return { ...state, counter: state.counter - 1 };
+    default:
+      return state;
   }
 }
 
