@@ -81,24 +81,15 @@ interfaces.**
 
 ---
 
-# Composition
-
-[twitter.com](https://twitter.com/tsevdos) example
-
-- how UI is going to look
-- state
-
----
-
 # Avatar sample code
 
 ```js
 function getProfilePhoto(username) {
-  return "https://twitter.com/photos/" + username;
+  return `https://twitter.com/photos/${username}`;
 }
 
 function getProfileLink(username) {
-  return "https://twitter.com/" + username;
+  return `https://twitter.com/${username}`;
 }
 
 function getAvatar(username) {
@@ -117,12 +108,12 @@ getAvatar("tsevdos");
 
 ```jsx
 const ProfilePhoto = (props) {
-  return <img src={"https://twitter.com/photos/" + props.username} />;
+  return <img src={`https://twitter.com/photos/${props.username}`} />;
 }
 
 function ProfileLink(props) {
   return (
-    <a href={"https://twitter.com/" + props.username}>
+    <a href={`https://twitter.com/${props.username}`}>
       { props.username }
     </a>
   );
@@ -286,19 +277,6 @@ React.createElement(type, [props], [...children]);
 
 ---
 
-# Virtual DOM
-
-The virtual DOM (VDOM) is an in-memory
-representation of real DOM. The representation of a UI is kept in memory and synced with the “real” DOM. It’s a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation.
-
----
-
-# Virtual DOM
-
-![height:550px](./assets/v-dom.png)
-
----
-
 # React.createElement
 
 ```jsx
@@ -368,7 +346,7 @@ const element = <div className={`${myClassName}-1`}>{title}</div>;
 
 # Babel transpilation / compilation
 
-- [example](https://babeljs.io/repl#?browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=MYewdgzgLgBATiEUCiAbApgW3WWBeGAExGAFdtcA6Ac3RQwqgCEBPASUIAoAiAQwAd-3AJQBuAFDjQkWFACWUDDALcAEulSoQMAOog4qQtwnToMTCwDCqXhAgA5XtmUxu0qLzlh0cY5NOwGlg4-DAAPIRyAG4wwDZ2jth4AN4ABgAkyRbWtg5O6AC-ALQAjKkFAHzJ8oqFYQD0kVEVokA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.7.4&externalPlugins=)
+- [example](https://babeljs.io/repl#?browsers=&build=&builtIns=false&corejs=3.6&spec=false&loose=false&code_lz=MYewdgzgLgBATiEUCiAbApgW3WWBeGAExGAFdtcA6Ac3RQwqgCEBPASUIAoAiAQwAd-3AJQBuAFDjQkWFACWUDDALcAEulSoQMAOog4qQtwnToMTCwDCqXhAgA5XtmUxu0qLzlh0cY5NOwGlg4-DAAPIRyAG4wwDZ2jth4AN4ABgAkyRbWtg5O6AC-ALQAjKkFAHzJ8oqFYQD0kVEVokA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=true&fileSize=false&timeTravel=false&sourceType=module&lineWrap=false&presets=react&prettier=false&targets=&version=7.16.2&externalPlugins=&assumptions=%7B%7D)
 
 ---
 
@@ -449,7 +427,7 @@ User-defined components must be capitalized in JSX (lower-case tag names are con
 
 # Functional component transpilation
 
-- [Babel example](https://babeljs.io/repl#?browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=MYewdgzgLgBATiEUCiAbApgW3WWBeGAExGAFdtcA6Ac3RQwqgCEBPASUIAoAiAQwAd-3AJQBuAFDjQkWAFkWAEQCWANxgF-CfhHUA-GAG9xMeHVJwwMADyFVug5pDbKmCNQC-VgPS2Vuie4SUuDQMOgMOPgwnMbWvjDAqLwQEAByvNh43NJQvEpg6HDcurEmVvLKaq7UWQAS4aggMADqIHCohNwwXiUmZRWqMNVZzeGg2DBQTQDCIITolLWkAEZdPbHeviVikgBK6LzAUAoA8rKUcDjzcJzhWJEANPCI9Pe4YkA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.7.4&externalPlugins=)
+- [Babel example](https://babeljs.io/repl#?browsers=&build=&builtIns=false&corejs=3.6&spec=false&loose=false&code_lz=MYewdgzgLgBATiEUCiAbApgW3WWBeGAExGAFdtcA6Ac3RQwqgCEBPASUIAoAiAQwAd-3AJQBuAFDjQkWAFkWAEQCWANxgF-CfhHUA-GAG9xMeHVJwwMADyFVug5pDbKmCNQC-VgPS2Vuie4SUuDQMOgMOPgwnMbWvjDAqLwQEAByvNh43NJQvEpg6HDcurEmVvLKaq7UWQAS4aggMADqIHCohNwwXiUmZRWqMNVZzeGg2DBQTQDCIITolLWkAEZdPbHeviVikgBK6LzAUAoA8rKUcDjzcJzhWJEANPCI9Pe4YiZAA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=true&fileSize=false&timeTravel=false&sourceType=module&lineWrap=false&presets=react&prettier=false&targets=&version=7.16.2&externalPlugins=&assumptions=%7B%7D)
 
 ---
 
@@ -707,6 +685,18 @@ useState hook enqueues changes to the component state and tells React that this 
 
 ---
 
+# Virtual DOM
+
+The virtual DOM (VDOM) is an in-memory representation of real DOM. The representation of a UI is kept in memory and synced with the “real” DOM. It’s a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation.
+
+---
+
+# Virtual DOM
+
+![height:550px](./assets/v-dom.png)
+
+---
+
 # Component state
 
 ```jsx
@@ -764,7 +754,7 @@ const changeName = () => {
 
 ---
 
-## Updating the state correctly
+# Updating the state correctly
 
 ```jsx
 // example state/03.html
